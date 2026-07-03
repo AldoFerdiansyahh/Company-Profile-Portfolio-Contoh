@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Proyek - Yayang Structural</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#111113',
+                        secondary: '#1a1a1e',
+                        accent: '#c5a880',
+                        bgLight: '#f4f5f7',
+                        bgPure: '#fbfbfd'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: linear-gradient(180deg, #f4f5f7 0%, #fbfbfd 100%); color: #111113; -webkit-font-smoothing: antialiased; }
+        .carousel-track { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .bg-grid-blueprint {
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(17, 17, 19, 0.01) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(17, 17, 19, 0.01) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased pt-24 bg-grid-blueprint">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-bgLight/80 backdrop-blur-md border-b border-primary/[0.04]">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2 group">
+                <span class="text-primary/40 group-hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider">&larr; Kembali ke Beranda</span>
+            </a>
+            <div class="flex items-center space-x-2">
+                <div class="w-6 h-6 bg-primary flex items-center justify-center rounded-md">
+                    <span class="text-accent font-bold text-[10px]">Y</span>
+                </div>
+                <span class="text-primary font-bold text-xs tracking-wider uppercase">Yayang.S</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <div class="mb-10 border-b border-primary/[0.04] pb-6">
+            <span id="project-category" class="text-[10px] font-bold tracking-[0.2em] text-primary/50 uppercase bg-primary/[0.04] px-3 py-1 rounded border border-primary/[0.02]">Category</span>
+            <h1 id="project-title" class="text-3xl md:text-5xl font-bold tracking-tight text-primary mt-4 mb-2">Project Title Loading...</h1>
+            <p id="project-location" class="text-xs text-primary/40 font-medium tracking-wide">Location</p>
+        </div>
+
+        <div class="relative w-full aspect-[21/9] rounded-3xl overflow-hidden bg-primary shadow-xl mb-3 group">
+            <div id="carousel-track" class="carousel-track flex h-full w-full"></div>
+            <button onclick="prevSlide()" class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-bgPure hover:text-primary transition-all opacity-0 group-hover:opacity-100 duration-300 z-10 shadow-md">&larr;</button>
+            <button onclick="nextSlide()" class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-bgPure hover:text-primary transition-all opacity-0 group-hover:opacity-100 duration-300 z-10 shadow-md">&rarr;</button>
+            <div id="carousel-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10"></div>
+        </div>
+        <p class="text-right text-[10px] text-primary/30 font-medium mb-16 italic tracking-wide">*Gunakan panah navigasi untuk melihat sudut elevasi & ruang interior</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
+            <div class="lg:col-span-4 bg-bgPure p-8 rounded-3xl border border-primary/[0.04] shadow-[0_4px_30px_rgba(17,17,19,0.02)] space-y-6">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-primary border-b border-primary/[0.04] pb-3">Spesifikasi Teknis</h3>
+                <div>
+                    <p class="text-[9px] uppercase text-primary/40 font-bold tracking-wider">Tahun Rampung</p>
+                    <p id="spec-year" class="text-sm font-bold text-primary mt-0.5">-</p>
+                </div>
+                <div>
+                    <p class="text-[9px] uppercase text-primary/40 font-bold tracking-wider">Luas Total Bangunan</p>
+                    <p id="spec-area" class="text-sm font-bold text-primary mt-0.5">-</p>
+                </div>
+                <div>
+                    <p class="text-[9px] uppercase text-primary/40 font-bold tracking-wider">Sistem Utama Struktur</p>
+                    <p id="spec-system" class="text-sm font-bold text-primary mt-0.5">-</p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 border-b border-primary/[0.03] pb-2">01 / Ringkasan Eksekutif & Tantangan Lapangan</h3>
+                <p id="project-desc" class="text-sm md:text-base text-primary/70 font-light leading-relaxed mb-8">Loading description...</p>
+                <h3 class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 border-b border-primary/[0.03] pb-2">02 / Metodologi Komputasi & Solusi Struktur</h3>
+                <p id="project-solution" class="text-sm text-primary/60 font-light leading-relaxed">Loading solution methodology...</p>
+            </div>
+        </div>
+
+        <section class="border-t border-primary/[0.05] pt-16 mb-24">
+            <div class="mb-8">
+                <h3 class="text-xs font-bold uppercase tracking-widest text-primary">Detail Fasad & Komponen Geometri</h3>
+            </div>
+            <div id="secondary-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+    </main>
+
+    <footer class="bg-primary text-bgLight/30 text-xs py-10 text-center">
+        <p>&copy; 2026 Yayang Structural Engineering. Seluruh Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        const projectData = {
+            "1": {
+                title: "The Luminary Tower",
+                category: "Komersial & Perkantoran",
+                location: "Sudirman Kaveling 21, Jakarta Pusat",
+                images: [
+                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
+                    "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1600&q=80",
+                    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
+                ],
+                year: "2025",
+                area: "74,000 m²",
+                system: "Dual Core Shear Wall & Outrigger Steel System",
+                desc: "The Luminary Tower merupakan mahakarya super-struktur perkantoran komersial vertikal bertingkat.",
+                solution: "Menggunakan metode Top-Down dengan kombinasi fondasi bor bore pile guna menjaga deformasi batuan."
+            },
+            "2": {
+                title: "Cleft Cliff Mansion",
+                category: "Residensial Mewah",
+                location: "Uluwatu Cliff Area, Badung, Bali",
+                images: [
+                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+                    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80"
+                ],
+                year: "2024",
+                area: "1,200 m²",
+                system: "Post-Tensioned Concrete Cantilever Slab",
+                desc: "Hunian eksklusif tepi pantai dengan pelat kantilever tanpa kolom penopang.",
+                solution: "Menggunakan semen khusus anti-sulfat berkepadatan tinggi guna menahan korosi air laut."
+            },
+            "3": {
+                title: "Paviliun Seni & Kreatif Dago",
+                category: "Fasilitas Publik / Galeri",
+                location: "Jl. Pakar Kulon, Dago, Bandung",
+                images: [
+                    "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
+                    "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80"
+                ],
+                year: "2025",
+                area: "3,500 m²",
+                system: "Exposed Architectural Concrete",
+                desc: "Ruang interaksi publik dengan pengaplikasian penuangan beton ekspos halus.",
+                solution: "Metode split-level engineering diimplementasikan untuk adaptasi kontur perbukitan curam."
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('project') || "1";
+        const data = projectData[projectId];
+
+        let currentSlideIndex = 0;
+        let totalSlides = 0;
+
+        if (data) {
+            totalSlides = data.images.length;
+            document.getElementById("project-title").innerText = data.title;
+            document.getElementById("project-category").innerText = data.category;
+            document.getElementById("project-location").innerText = data.location;
+            document.getElementById("spec-year").innerText = data.year;
+            document.getElementById("spec-area").innerText = data.area;
+            document.getElementById("project-desc").innerText = data.desc;
+            document.getElementById("project-solution").innerText = data.solution;
+            document.getElementById("spec-system").innerText = data.system;
+
+            const track = document.getElementById("carousel-track");
+            const dotsContainer = document.getElementById("carousel-dots");
+            const secondaryGrid = document.getElementById("secondary-grid");
+
+            data.images.forEach((imgUrl, idx) => {
+                const slide = document.createElement("div");
+                slide.className = "min-w-full w-full h-full flex-shrink-0";
+                slide.innerHTML = `<img src="${imgUrl}" class="w-full h-full object-cover">`;
+                track.appendChild(slide);
+
+                const dot = document.createElement("button");
+                dot.className = `w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-bgPure w-5' : 'bg-bgPure/30'}`;
+                dot.id = `carousel-dot-${idx}`;
+                dot.onclick = () => goToSlide(idx);
+                dotsContainer.appendChild(dot);
+
+                const gridItem = document.createElement("div");
+                gridItem.className = "w-full aspect-video rounded-2xl overflow-hidden bg-bgPure border border-primary/[0.04]";
+                gridItem.innerHTML = `<img src="${imgUrl}" class="w-full h-full object-cover">`;
+                secondaryGrid.appendChild(gridItem);
+            });
+        }
+
+        function updateCarouselPosition() {
+            document.getElementById("carousel-track").style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.getElementById(`carousel-dot-${i}`);
+                if (dot) {
+                    if (i === currentSlideIndex) { dot.classList.add("bg-bgPure", "w-5"); }
+                    else { dot.classList.remove("bg-bgPure", "w-5"); }
+                }
+            }
+        }
+        function nextSlide() { currentSlideIndex = (currentSlideIndex + 1) % totalSlides; updateCarouselPosition(); }
+        function prevSlide() { currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides; updateCarouselPosition(); }
+        function goToSlide(idx) { currentSlideIndex = idx; updateCarouselPosition(); }
+    </script>
+</body>
+</html>
