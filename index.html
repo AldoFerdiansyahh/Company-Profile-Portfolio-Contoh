@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Jaya Asricom Indonesia - Premium Construction Company Profile</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -44,12 +46,13 @@
         }
         .project-card { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
         .project-card img { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .project-card:hover { transform: translateY(-6px); box-shadow: 0 40px 80px rgba(12, 35, 64, 0.06); }
+        .project-card:hover { transform: translateY(-6px); box-shadow: 0 40px 80px rgba(12, 35, 64, 0.08); }
         .project-card:hover img { transform: scale(1.025); }
     </style>
 </head>
 <body class="font-sans antialiased bg-grid-blueprint">
 
+    <!-- NAVIGATION BAR -->
     <nav class="fixed top-0 left-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
             <div class="flex items-center">
@@ -65,6 +68,7 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="relative min-h-[90vh] flex items-center justify-center pt-32 px-6 overflow-hidden">
         <div class="max-w-5xl mx-auto text-center z-10 py-12">
             <span class="inline-block text-[10px] font-bold tracking-[0.3em] text-brandOrange uppercase mb-6 bg-brandOrange/5 px-4 py-1.5 rounded-full border border-brandOrange/10">Cetak Biru Infrastruktur & Kontraktor Struktural</span>
@@ -81,6 +85,7 @@
         </div>
     </section>
 
+    <!-- SECTION 1: TENTANG KAMI -->
     <section id="tentang" class="py-24 px-6 bg-bgPure border-t border-brandNavy/[0.02]">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -111,6 +116,7 @@
         </div>
     </section>
 
+    <!-- SECTION 2: LAYANAN DETAIL -->
     <section id="layanan" class="py-28 px-6 bg-gradient-to-b from-[#f8f9fb] to-[#f4f5f7] border-t border-b border-brandNavy/[0.02]">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b border-brandNavy/[0.04] pb-8">
@@ -124,6 +130,7 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service A -->
                 <div class="bg-bgPure/80 backdrop-blur-sm p-10 rounded-3xl border border-brandNavy/[0.03] shadow-[0_10px_30px_rgba(12,35,64,0.015)] hover:shadow-[0_20px_40px_rgba(12,35,64,0.04)] hover:border-brandTeal/20 transition-all duration-500 group flex flex-col justify-between min-h-[320px]">
                     <div>
                         <div class="flex items-center justify-between mb-8">
@@ -136,6 +143,7 @@
                     <div class="border-t border-brandNavy/[0.03] pt-4 mt-6 text-[10px] uppercase font-bold tracking-wider text-brandNavy/30 group-hover:text-brandTeal transition-colors duration-300">&rarr; Structural FEA Standards</div>
                 </div>
 
+                <!-- Service B -->
                 <div class="bg-bgPure/80 backdrop-blur-sm p-10 rounded-3xl border border-brandNavy/[0.03] shadow-[0_10px_30px_rgba(12,35,64,0.015)] hover:shadow-[0_20px_40px_rgba(12,35,64,0.04)] hover:border-brandGreen/30 transition-all duration-500 group flex flex-col justify-between min-h-[320px]">
                     <div>
                         <div class="flex items-center justify-between mb-8">
@@ -148,6 +156,7 @@
                     <div class="border-t border-brandNavy/[0.03] pt-4 mt-6 text-[10px] uppercase font-bold tracking-wider text-brandNavy/30 group-hover:text-brandGreen transition-colors duration-300">&rarr; Infrastructure Civil Scale</div>
                 </div>
 
+                <!-- Service C -->
                 <div class="bg-bgPure/80 backdrop-blur-sm p-10 rounded-3xl border border-brandNavy/[0.03] shadow-[0_10px_30px_rgba(12,35,64,0.015)] hover:shadow-[0_20px_40px_rgba(12,35,64,0.04)] hover:border-brandOrange/20 transition-all duration-500 group flex flex-col justify-between min-h-[320px]">
                     <div>
                         <div class="flex items-center justify-between mb-8">
@@ -163,40 +172,45 @@
         </div>
     </section>
 
+    <!-- SECTION 3: GALERI PORTOFOLIO UTAMA (BISA DIKLIK) -->
     <section id="portfolio" class="py-24 px-6 bg-bgPure">
         <div class="max-w-6xl mx-auto">
             <div class="mb-16 border-b border-brandNavy/[0.04] pb-6">
                 <span class="text-[10px] font-bold tracking-widest text-brandOrange uppercase block mb-3">03 / Rekam Jejak</span>
                 <h2 class="text-2xl md:text-4xl font-bold text-brandNavy tracking-tight">Karya Restorasi & Struktur Selesai.</h2>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Proyek 1 -->
                 <a href="detail.html?project=1" class="project-card bg-bgPure rounded-3xl overflow-hidden border border-brandNavy/[0.04] shadow-sm block group">
                     <div class="w-full aspect-[4/3] overflow-hidden bg-bgLight">
-                        <img src="F (5).jpeg" alt="Project 1" class="w-full h-full object-cover">
+                        <img src="F (11).jpeg" alt="Project 1" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h4 class="text-sm font-bold text-brandNavy mb-1">The Luminary Tower Complex</h4>
-                        <p class="text-xs text-brandGray mb-4">Komersial & Ritel</p>
+                        <h4 class="text-sm font-bold text-brandNavy mb-1">Mekanikal & Heavy Steel Structural</h4>
+                        <p class="text-xs text-brandGray mb-4">Instalasi Utilitas Pabrik & Perpipaan Utama</p>
                         <span class="text-xs text-brandOrange font-semibold group-hover:translate-x-1 transition-transform inline-block">Lihat Detil Struktur &rarr;</span>
                     </div>
                 </a>
+                <!-- Proyek 2 -->
                 <a href="detail.html?project=2" class="project-card bg-bgPure rounded-3xl overflow-hidden border border-brandNavy/[0.04] shadow-sm block group">
                     <div class="w-full aspect-[4/3] overflow-hidden bg-bgLight">
                         <img src="F (2).jpeg" alt="Project 2" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h4 class="text-sm font-bold text-brandNavy mb-1">Aura Deck & Residence Mansion</h4>
-                        <p class="text-xs text-brandGray mb-4">Residensial Mewah</p>
+                        <h4 class="text-sm font-bold text-brandNavy mb-1">Aura Resort Exterior Decking</h4>
+                        <p class="text-xs text-brandGray mb-4">Pekerjaan Lansekap & Struktur Kayu Komposit</p>
                         <span class="text-xs text-brandOrange font-semibold group-hover:translate-x-1 transition-transform inline-block">Lihat Detil Struktur &rarr;</span>
                     </div>
                 </a>
+                <!-- Proyek 3 -->
                 <a href="detail.html?project=3" class="project-card bg-bgPure rounded-3xl overflow-hidden border border-brandNavy/[0.04] shadow-sm block group">
                     <div class="w-full aspect-[4/3] overflow-hidden bg-bgLight">
-                        <img src="F (18).jpeg" alt="Project 3" class="w-full h-full object-cover">
+                        <img src="P (2).JPG" alt="Project 3" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h4 class="text-sm font-bold text-brandNavy mb-1">Ereksi Portal Baja Dago Paviliun</h4>
-                        <p class="text-xs text-brandGray mb-4">Fasilitas Publik</p>
+                        <h4 class="text-sm font-bold text-brandNavy mb-1">Premium Interior & MEP Fit-Out</h4>
+                        <p class="text-xs text-brandGray mb-4">Penyelesaian Sipil & Tata Udara Koridor Gedung</p>
                         <span class="text-xs text-brandOrange font-semibold group-hover:translate-x-1 transition-transform inline-block">Lihat Detil Struktur &rarr;</span>
                     </div>
                 </a>
@@ -204,6 +218,7 @@
         </div>
     </section>
 
+    <!-- SECTION 4: STRUKTUR MANAJEMEN -->
     <section id="tim" class="py-24 px-6 bg-[#f8f9fb] border-t border-brandNavy/[0.03]">
         <div class="max-w-6xl mx-auto">
             <div class="mb-16 text-center">
@@ -211,17 +226,17 @@
                 <h2 class="text-2xl md:text-3xl font-bold text-brandNavy tracking-tight">Struktur Direksi & Manajemen Structural.</h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.02] rounded-3xl shadow-sm">
+                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.03] shadow-sm rounded-3xl">
                     <div class="w-10 h-10 bg-brandNavy text-white rounded-lg mx-auto mb-4 flex items-center justify-center font-bold text-xs">01</div>
                     <h4 class="text-sm font-bold text-brandNavy tracking-wide uppercase">Chief Executive Officer</h4>
                     <p class="text-xs text-brandGray font-medium mt-1">& Principal Structural Engineer</p>
                 </div>
-                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.02] rounded-3xl shadow-sm">
+                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.03] shadow-sm rounded-3xl">
                     <div class="w-10 h-10 bg-brandNavy text-white rounded-lg mx-auto mb-4 flex items-center justify-center font-bold text-xs">02</div>
                     <h4 class="text-sm font-bold text-brandNavy tracking-wide uppercase">Chief Operating Officer</h4>
                     <p class="text-xs text-brandGray font-medium mt-1">& Head of QA Engineering</p>
                 </div>
-                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.02] rounded-3xl shadow-sm">
+                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.03] shadow-sm rounded-3xl">
                     <div class="w-10 h-10 bg-brandNavy text-white rounded-lg mx-auto mb-4 flex items-center justify-center font-bold text-xs">03</div>
                     <h4 class="text-sm font-bold text-brandNavy tracking-wide uppercase">Senior Lead Estimator</h4>
                     <p class="text-xs text-brandGray font-medium mt-1">& Project Cost Controller</p>
@@ -230,6 +245,7 @@
         </div>
     </section>
 
+    <!-- SECTION 5: KONSULTASI -->
     <section id="kontak" class="py-24 px-6 bg-brandNavy text-white relative overflow-hidden">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -284,6 +300,7 @@
                 </div>
             </div>
 
+            <!-- MACRO FOOTER -->
             <div class="border-t border-white/10 mt-24 pt-16 grid grid-cols-1 md:grid-cols-12 gap-10 text-xs text-white/50">
                 <div class="md:col-span-5">
                     <div class="flex items-center space-x-2 text-white mb-4 bg-white/95 px-4 py-2.5 rounded-2xl inline-block max-w-[200px] shadow-sm">
