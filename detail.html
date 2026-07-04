@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Proyek - Yayang Structural</title>
+    <title>PT Jaya Asricom Indonesia - Premium Construction Company Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,195 +16,310 @@
                         sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#111113',
-                        secondary: '#1a1a1e',
-                        accent: '#c5a880',
-                        bgLight: '#f4f5f7',
-                        bgPure: '#fbfbfd'
+                        brandNavy: '#0c2340',     
+                        brandGray: '#53565a',     
+                        brandOrange: '#c05c23',   
+                        brandGreen: '#8a9a5b',    
+                        brandTeal: '#2f808a',     
+                        bgLight: '#f4f5f7',       
+                        bgPure: '#fbfbfd'         
                     }
                 }
             }
         }
     </script>
     <style>
-        body { background: linear-gradient(180deg, #f4f5f7 0%, #fbfbfd 100%); color: #111113; -webkit-font-smoothing: antialiased; }
-        .carousel-track { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-        .bg-grid-blueprint {
-            background-size: 50px 50px;
-            background-image: linear-gradient(to right, rgba(17, 17, 19, 0.01) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(17, 17, 19, 0.01) 1px, transparent 1px);
+        html { scroll-behavior: smooth; }
+        body { background: linear-gradient(180deg, #f4f5f7 0%, #fbfbfd 100%); color: #0c2340; -webkit-font-smoothing: antialiased; }
+        .glass-nav {
+            background-color: rgba(244, 245, 247, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(12, 35, 64, 0.04);
         }
+        .bg-grid-blueprint {
+            background-size: 60px 60px;
+            background-image: linear-gradient(to right, rgba(12, 35, 64, 0.01) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(12, 35, 64, 0.01) 1px, transparent 1px);
+        }
+        .project-card { transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .project-card img { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .project-card:hover { transform: translateY(-6px); box-shadow: 0 40px 80px rgba(12, 35, 64, 0.06); }
+        .project-card:hover img { transform: scale(1.025); }
     </style>
 </head>
-<body class="font-sans antialiased pt-24 bg-grid-blueprint">
+<body class="font-sans antialiased bg-grid-blueprint">
 
-    <nav class="fixed top-0 left-0 w-full z-50 bg-bgLight/80 backdrop-blur-md border-b border-primary/[0.04]">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="flex items-center space-x-2 group">
-                <span class="text-primary/40 group-hover:text-primary transition-colors text-xs font-bold uppercase tracking-wider">&larr; Kembali ke Beranda</span>
-            </a>
-            <div class="flex items-center space-x-2">
-                <div class="w-6 h-6 bg-primary flex items-center justify-center rounded-md">
-                    <span class="text-accent font-bold text-[10px]">Y</span>
-                </div>
-                <span class="text-primary font-bold text-xs tracking-wider uppercase">Yayang.S</span>
+    <nav class="fixed top-0 left-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="logo.png" alt="PT Jaya Asricom Indonesia Logo" class="h-16 w-auto object-contain">
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-widest text-brandNavy/70 uppercase">
+                <a href="#tentang" class="hover:text-brandOrange transition-colors duration-300">Tentang Kami</a>
+                <a href="#layanan" class="hover:text-brandOrange transition-colors duration-300">Layanan</a>
+                <a href="#portfolio" class="hover:text-brandOrange transition-colors duration-300">Portofolio</a>
+                <a href="#tim" class="hover:text-brandOrange transition-colors duration-300">Struktur Manajemen</a>
+                <a href="#kontak" class="bg-brandNavy text-bgLight px-6 py-3 rounded-full text-[11px] font-bold tracking-widest hover:bg-brandOrange transition-all duration-300">Hubungi Kami</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-6 py-12">
-        <div class="mb-10 border-b border-primary/[0.04] pb-6">
-            <span id="project-category" class="text-[10px] font-bold tracking-[0.2em] text-primary/50 uppercase bg-primary/[0.04] px-3 py-1 rounded border border-primary/[0.02]">Category</span>
-            <h1 id="project-title" class="text-3xl md:text-5xl font-bold tracking-tight text-primary mt-4 mb-2">Project Title Loading...</h1>
-            <p id="project-location" class="text-xs text-primary/40 font-medium tracking-wide">Location</p>
+    <section class="relative min-h-[90vh] flex items-center justify-center pt-32 px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center z-10 py-12">
+            <span class="inline-block text-[10px] font-bold tracking-[0.3em] text-brandOrange uppercase mb-6 bg-brandOrange/5 px-4 py-1.5 rounded-full border border-brandOrange/10">Cetak Biru Infrastruktur & Kontraktor Struktural</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-brandNavy tracking-tight leading-[1.1] mb-8">
+                Membangun Prasarana Vital dengan Presisi Mutakomodasi.
+            </h1>
+            <p class="text-sm md:text-base text-brandGray max-w-2xl mx-auto font-light mb-12 leading-relaxed">
+                PT Jaya Asricom Indonesia mengintegrasikan komputasi rekayasa sipil modern dengan ketahanan material superior demi mewujudkan infrastruktur nasional yang kokoh, fungsional, dan estetik.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#portfolio" class="w-full sm:w-auto bg-brandNavy text-bgLight px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-brandOrange transition-all shadow-lg">Jelajahi Portofolio</a>
+                <a href="#tentang" class="w-full sm:w-auto border border-brandNavy/20 text-brandNavy px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-brandNavy hover:text-white transition-all">Kenali Perusahaan</a>
+            </div>
         </div>
+    </section>
 
-        <div class="relative w-full aspect-[21/9] rounded-3xl overflow-hidden bg-primary shadow-xl mb-3 group">
-            <div id="carousel-track" class="carousel-track flex h-full w-full"></div>
-            <button onclick="prevSlide()" class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-bgPure hover:text-primary transition-all opacity-0 group-hover:opacity-100 duration-300 z-10 shadow-md">&larr;</button>
-            <button onclick="nextSlide()" class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-primary/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-bgPure hover:text-primary transition-all opacity-0 group-hover:opacity-100 duration-300 z-10 shadow-md">&rarr;</button>
-            <div id="carousel-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10"></div>
+    <section id="tentang" class="py-24 px-6 bg-bgPure border-t border-brandNavy/[0.02]">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5">
+                    <span class="text-[10px] font-bold tracking-widest text-brandOrange uppercase block mb-3">01 / Profil Korporasi</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brandNavy tracking-tight mb-6">Dedikasi Dekade untuk Kekuatan Struktur Sipil.</h2>
+                    <p class="text-brandGray text-sm font-light leading-relaxed mb-6">
+                        Didirikan atas landasan integritas rekayasa, **PT Jaya Asricom Indonesia** telah tumbuh menjadi salah satu firma kontraktor dan konsultan struktural terpercaya di Indonesia. Kami berfokus pada kalkulasi beban makro, pengawasan rigid, dan manajemen material efisien.
+                    </p>
+                    <p class="text-brandGray text-sm font-light leading-relaxed mb-8">
+                        Dari kompleks gedung pencakar langit komersial hingga fasilitas industri bentang lebar, kami memastikan setiap kalkulasi matematis di atas kertas terwujud menjadi fondasi riil yang tangguh menghadapi tantangan zaman dan seismik.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-brandNavy/[0.05] pt-6">
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brandNavy mb-1">Visi Kami</h4>
+                            <p class="text-xs text-brandGray font-light leading-relaxed">Menjadi pionir rekayasa konstruksi yang menyatukan kalkulasi mekanika murni dengan efisiensi energi bangunan.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-brandNavy mb-1">Misi Kami</h4>
+                            <p class="text-xs text-brandGray font-light leading-relaxed">Menerapkan standar kontrol kualitas nol cacat (*zero defect*) pada setiap penuangan beton dan ereksi baja.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-md aspect-video lg:aspect-square bg-gray-100">
+                    <img src="F (1).jpeg" alt="Dokumentasi Pekerjaan Proyek PT Jaya Asricom Indonesia" class="w-full h-full object-cover">
+                </div>
+            </div>
         </div>
-        <p class="text-right text-[10px] text-primary/30 font-medium mb-16 italic tracking-wide">*Gunakan panah navigasi untuk melihat sudut elevasi & ruang interior</p>
+    </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
-            <div class="lg:col-span-4 bg-bgPure p-8 rounded-3xl border border-primary/[0.04] shadow-[0_4px_30px_rgba(17,17,19,0.02)] space-y-6">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-primary border-b border-primary/[0.04] pb-3">Spesifikasi Teknis</h3>
+    <section id="layanan" class="py-28 px-6 bg-gradient-to-b from-[#f8f9fb] to-[#f4f5f7] border-t border-b border-brandNavy/[0.02]">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 border-b border-brandNavy/[0.04] pb-8">
                 <div>
-                    <p class="text-[9px] uppercase text-primary/40 font-bold tracking-wider">Tahun Rampung</p>
-                    <p id="spec-year" class="text-sm font-bold text-primary mt-0.5">-</p>
+                    <span class="text-[10px] font-bold tracking-[0.25em] text-brandOrange uppercase block mb-3">02 / Pilar Kompetensi</span>
+                    <h2 class="text-3xl font-bold text-brandNavy tracking-tight">Solusi Rekayasa Konstruksi Komprehensif.</h2>
                 </div>
-                <div>
-                    <p class="text-[9px] uppercase text-primary/40 font-bold tracking-wider">Luas Total Bangunan</p>
-                    <p id="spec-area" class="text-sm font-bold text-primary mt-0.5">-</p>
+                <p class="text-xs text-brandGray/70 max-w-xs mt-4 md:mt-0 leading-relaxed font-light">
+                    Metodologi pengerjaan dengan presisi tinggi dan standarisasi material makro yang teruji secara komputasi struktural.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-bgPure/80 backdrop-blur-sm p-10 rounded-3xl border border-brandNavy/[0.03] shadow-[0_10px_30px_rgba(12,35,64,0.015)] hover:shadow-[0_20px_40px_rgba(12,35,64,0.04)] hover:border-brandTeal/20 transition-all duration-500 group flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="text-[11px] font-bold tracking-widest text-brandTeal bg-brandTeal/5 px-3 py-1 rounded-md uppercase">Modul A</span>
+                            <div class="w-2 h-2 rounded-full bg-brandTeal shadow-[0_0_10px_#2f808a]"></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-brandNavy mb-3 tracking-tight group-hover:text-brandTeal transition-colors duration-300">Rekayasa Struktur Vertikal</h3>
+                        <p class="text-xs text-brandGray leading-relaxed font-light">Analisis elemen hingga (*Finite Element Analysis*) dan konstruksi struktur beton bertulang untuk gedung perkantoran bertingkat tinggi.</p>
+                    </div>
+                    <div class="border-t border-brandNavy/[0.03] pt-4 mt-6 text-[10px] uppercase font-bold tracking-wider text-brandNavy/30 group-hover:text-brandTeal transition-colors duration-300">&rarr; Structural FEA Standards</div>
                 </div>
-                <div>
-                    <p class="text-[9px] uppercase text-primary/40 font-bold tracking-wider">Sistem Utama Struktur</p>
-                    <p id="spec-system" class="text-sm font-bold text-primary mt-0.5">-</p>
+
+                <div class="bg-bgPure/80 backdrop-blur-sm p-10 rounded-3xl border border-brandNavy/[0.03] shadow-[0_10px_30px_rgba(12,35,64,0.015)] hover:shadow-[0_20px_40px_rgba(12,35,64,0.04)] hover:border-brandGreen/30 transition-all duration-500 group flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="text-[11px] font-bold tracking-widest text-brandGreen bg-brandGreen/5 px-3 py-1 rounded-md uppercase">Modul B</span>
+                            <div class="w-2 h-2 rounded-full bg-brandGreen shadow-[0_0_10px_#8a9a5b]"></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-brandNavy mb-3 tracking-tight group-hover:text-brandGreen transition-colors duration-300">Pekerjaan Infrastruktur Makro</h3>
+                        <p class="text-xs text-brandGray leading-relaxed font-light">Pembangunan struktur jalan layang, jembatan bentang panjang rangka baja, serta dinding penahan tanah (*retaining wall*) perimeter.</p>
+                    </div>
+                    <div class="border-t border-brandNavy/[0.03] pt-4 mt-6 text-[10px] uppercase font-bold tracking-wider text-brandNavy/30 group-hover:text-brandGreen transition-colors duration-300">&rarr; Infrastructure Civil Scale</div>
+                </div>
+
+                <div class="bg-bgPure/80 backdrop-blur-sm p-10 rounded-3xl border border-brandNavy/[0.03] shadow-[0_10px_30px_rgba(12,35,64,0.015)] hover:shadow-[0_20px_40px_rgba(12,35,64,0.04)] hover:border-brandOrange/20 transition-all duration-500 group flex flex-col justify-between min-h-[320px]">
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <span class="text-[11px] font-bold tracking-widest text-brandOrange bg-brandOrange/5 px-3 py-1 rounded-md uppercase">Modul C</span>
+                            <div class="w-2 h-2 rounded-full bg-brandOrange shadow-[0_0_10px_#c05c23]"></div>
+                        </div>
+                        <h3 class="text-lg font-bold text-brandNavy mb-3 tracking-tight group-hover:text-brandOrange transition-colors duration-300">Fabrikasi Gudang Industri</h3>
+                        <p class="text-xs text-brandGray leading-relaxed font-light">Perancangan sistem portal baja WF rigid untuk gudang logistik otomatisasi hulu dan manufaktur pabrik berskala besar.</p>
+                    </div>
+                    <div class="border-t border-brandNavy/[0.03] pt-4 mt-6 text-[10px] uppercase font-bold tracking-wider text-brandNavy/30 group-hover:text-brandOrange transition-colors duration-300">&rarr; Heavy Rigging Portal Frames</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 px-6 bg-bgPure">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16 border-b border-brandNavy/[0.04] pb-6">
+                <span class="text-[10px] font-bold tracking-widest text-brandOrange uppercase block mb-3">03 / Rekam Jejak</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-brandNavy tracking-tight">Karya Restorasi & Struktur Selesai.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="detail.html?project=1" class="project-card bg-bgPure rounded-3xl overflow-hidden border border-brandNavy/[0.04] shadow-sm block group">
+                    <div class="w-full aspect-[4/3] overflow-hidden bg-bgLight">
+                        <img src="F (5).jpeg" alt="Project 1" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-sm font-bold text-brandNavy mb-1">The Luminary Tower Complex</h4>
+                        <p class="text-xs text-brandGray mb-4">Komersial & Ritel</p>
+                        <span class="text-xs text-brandOrange font-semibold group-hover:translate-x-1 transition-transform inline-block">Lihat Detil Struktur &rarr;</span>
+                    </div>
+                </a>
+                <a href="detail.html?project=2" class="project-card bg-bgPure rounded-3xl overflow-hidden border border-brandNavy/[0.04] shadow-sm block group">
+                    <div class="w-full aspect-[4/3] overflow-hidden bg-bgLight">
+                        <img src="F (2).jpeg" alt="Project 2" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-sm font-bold text-brandNavy mb-1">Aura Deck & Residence Mansion</h4>
+                        <p class="text-xs text-brandGray mb-4">Residensial Mewah</p>
+                        <span class="text-xs text-brandOrange font-semibold group-hover:translate-x-1 transition-transform inline-block">Lihat Detil Struktur &rarr;</span>
+                    </div>
+                </a>
+                <a href="detail.html?project=3" class="project-card bg-bgPure rounded-3xl overflow-hidden border border-brandNavy/[0.04] shadow-sm block group">
+                    <div class="w-full aspect-[4/3] overflow-hidden bg-bgLight">
+                        <img src="F (18).jpeg" alt="Project 3" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-sm font-bold text-brandNavy mb-1">Ereksi Portal Baja Dago Paviliun</h4>
+                        <p class="text-xs text-brandGray mb-4">Fasilitas Publik</p>
+                        <span class="text-xs text-brandOrange font-semibold group-hover:translate-x-1 transition-transform inline-block">Lihat Detil Struktur &rarr;</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tim" class="py-24 px-6 bg-[#f8f9fb] border-t border-brandNavy/[0.03]">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-16 text-center">
+                <span class="text-[10px] font-bold tracking-widest text-brandOrange uppercase block mb-3">04 / Ekspertise Manusia</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brandNavy tracking-tight">Struktur Direksi & Manajemen Structural.</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.02] rounded-3xl shadow-sm">
+                    <div class="w-10 h-10 bg-brandNavy text-white rounded-lg mx-auto mb-4 flex items-center justify-center font-bold text-xs">01</div>
+                    <h4 class="text-sm font-bold text-brandNavy tracking-wide uppercase">Chief Executive Officer</h4>
+                    <p class="text-xs text-brandGray font-medium mt-1">& Principal Structural Engineer</p>
+                </div>
+                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.02] rounded-3xl shadow-sm">
+                    <div class="w-10 h-10 bg-brandNavy text-white rounded-lg mx-auto mb-4 flex items-center justify-center font-bold text-xs">02</div>
+                    <h4 class="text-sm font-bold text-brandNavy tracking-wide uppercase">Chief Operating Officer</h4>
+                    <p class="text-xs text-brandGray font-medium mt-1">& Head of QA Engineering</p>
+                </div>
+                <div class="text-center p-8 bg-bgPure border border-brandNavy/[0.02] rounded-3xl shadow-sm">
+                    <div class="w-10 h-10 bg-brandNavy text-white rounded-lg mx-auto mb-4 flex items-center justify-center font-bold text-xs">03</div>
+                    <h4 class="text-sm font-bold text-brandNavy tracking-wide uppercase">Senior Lead Estimator</h4>
+                    <p class="text-xs text-brandGray font-medium mt-1">& Project Cost Controller</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-24 px-6 bg-brandNavy text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-5">
+                    <span class="text-[10px] font-bold tracking-[0.25em] text-brandOrange uppercase block mb-4">05 / Kontak Kerja</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Mulai Konsultasi Cetak Biru Proyek Anda.</h2>
+                    <p class="text-white/60 font-light text-xs leading-relaxed mb-12">
+                        Tim teknisi sipil senior kami siap membantu mewujudkan kalkulasi rencana anggaran biaya (RAB) yang presisi serta jaminan timeline pengerjaan yang ketat.
+                    </p>
+                    <div class="space-y-6 text-xs font-light text-white/80 border-t border-white/10 pt-8">
+                        <div>
+                            <p class="text-brandOrange font-bold uppercase text-[9px] tracking-wider mb-1">Headquarters / Kantor Operasional</p>
+                            <p class="text-sm font-medium">Wisma Jaya Asricom, Gedung B Lantai 4, Jl. Asia Afrika No. 142, Bandung</p>
+                        </div>
+                        <div>
+                            <p class="text-brandOrange font-bold uppercase text-[9px] tracking-wider mb-1">Saluran Komunikasi Elektronik</p>
+                            <p class="text-sm font-medium">tender@jayaasricom.com</p>
+                        </div>
+                        <div>
+                            <p class="text-brandOrange font-bold uppercase text-[9px] tracking-wider mb-1">Telepon Resmi</p>
+                            <p class="text-sm font-medium">+62 (22) 4012 1904</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-[#13274c] p-8 md:p-10 rounded-3xl border border-white/[0.05] shadow-xl">
+                    <form class="space-y-5" onsubmit="event.preventDefault(); alert('Formulir berhasil dikirim!');">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[9px] uppercase tracking-wider text-white/40 mb-1.5 font-bold">Nama Klien / Instansi</label>
+                                <input type="text" required class="w-full bg-brandNavy border border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-brandOrange text-white transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-[9px] uppercase tracking-wider text-white/40 mb-1.5 font-bold">Alamat Email</label>
+                                <input type="email" required class="w-full bg-brandNavy border border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-brandOrange text-white transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-[9px] uppercase tracking-wider text-white/40 mb-1.5 font-bold">Klasifikasi Konstruksi</label>
+                            <select class="w-full bg-brandNavy border border-white/10 rounded-xl px-4 py-3.5 text-xs focus:outline-none focus:border-brandOrange text-white/80">
+                                <option>Gedung Bertingkat Tinggi / Komersial</option>
+                                <option>Gudang Industri / Fabrikasi Baja Bentang Lebar</option>
+                                <option>Residensial Mewah / Perumahan Cluster</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[9px] uppercase tracking-wider text-white/40 mb-1.5 font-bold">Deskripsi Ringkas Rencana Anggaran & Lokasi</label>
+                            <textarea rows="4" required class="w-full bg-brandNavy border border-white/10 rounded-xl px-4 py-3 text-xs focus:outline-none focus:border-brandOrange text-white placeholder:text-white/20 resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brandOrange text-white font-bold text-xs uppercase tracking-widest py-3.5 rounded-xl hover:bg-white hover:text-brandNavy transition-all">Kirim Rencana Proyek Resmi</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="lg:col-span-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 border-b border-primary/[0.03] pb-2">01 / Ringkasan Eksekutif & Tantangan Lapangan</h3>
-                <p id="project-desc" class="text-sm md:text-base text-primary/70 font-light leading-relaxed mb-8">Loading description...</p>
-                <h3 class="text-xs font-bold uppercase tracking-widest text-secondary mb-3 border-b border-primary/[0.03] pb-2">02 / Metodologi Komputasi & Solusi Struktur</h3>
-                <p id="project-solution" class="text-sm text-primary/60 font-light leading-relaxed">Loading solution methodology...</p>
+            <div class="border-t border-white/10 mt-24 pt-16 grid grid-cols-1 md:grid-cols-12 gap-10 text-xs text-white/50">
+                <div class="md:col-span-5">
+                    <div class="flex items-center space-x-2 text-white mb-4 bg-white/95 px-4 py-2.5 rounded-2xl inline-block max-w-[200px] shadow-sm">
+                        <img src="logo.jpeg" alt="PT Jaya Asricom Indonesia Logo" class="h-8 w-auto object-contain">
+                    </div>
+                    <p class="font-light text-white/40 leading-relaxed max-w-sm">
+                        Kontraktor utama dan konsultan rekayasa kekuatan sipil nasional berlisensi, menghantarkan keandalan struktur struktural tanpa kompromi sejak dekade awal.
+                    </p>
+                </div>
+                <div class="md:col-span-3">
+                    <h5 class="text-white font-bold uppercase tracking-wider text-[10px] mb-4">Navigasi Profil</h5>
+                    <ul class="space-y-2 font-light text-white/40">
+                        <li><a href="#tentang" class="hover:text-brandOrange transition-colors">Filosofi & Tentang</a></li>
+                        <li><a href="#layanan" class="hover:text-brandOrange transition-colors">Layanan Utama</a></li>
+                        <li><a href="#portfolio" class="hover:text-brandOrange transition-colors">Katalog Portofolio</a></li>
+                        <li><a href="#tim" class="hover:text-brandOrange transition-colors">Struktur Direksi</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-4">
+                    <h5 class="text-white font-bold uppercase tracking-wider text-[10px] mb-4">Sertifikasi & Lisensi Resmi</h5>
+                    <p class="font-light text-white/40 leading-relaxed mb-3">
+                        Angka Registrasi LPJK Kontraktor Utama: **No. 04.1202.2026.01**
+                    </p>
+                    <span class="inline-block px-2.5 py-1 bg-white/5 rounded border border-white/10 text-[10px] text-brandOrange font-semibold uppercase tracking-wider">ISO 9001:2015 Structural Certified</span>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-white/30">
+                <p>&copy; 2026 PT Jaya Asricom Indonesia. Seluruh Hak Cipta Dilindungi.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0 font-medium">
+                    <a href="#" class="hover:text-brandOrange transition-colors">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-brandOrange transition-colors">Syarat Regulasi Sipil</a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <section class="border-t border-primary/[0.05] pt-16 mb-24">
-            <div class="mb-8">
-                <h3 class="text-xs font-bold uppercase tracking-widest text-primary">Detail Fasad & Komponen Geometri</h3>
-            </div>
-            <div id="secondary-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-        </section>
-    </main>
-
-    <footer class="bg-primary text-bgLight/30 text-xs py-10 text-center">
-        <p>&copy; 2026 Yayang Structural Engineering. Seluruh Hak Cipta Dilindungi.</p>
-    </footer>
-
-    <script>
-        const projectData = {
-            "1": {
-                title: "The Luminary Tower",
-                category: "Komersial & Perkantoran",
-                location: "Sudirman Kaveling 21, Jakarta Pusat",
-                images: [
-                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
-                    "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&w=1600&q=80",
-                    "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
-                ],
-                year: "2025",
-                area: "74,000 m²",
-                system: "Dual Core Shear Wall & Outrigger Steel System",
-                desc: "The Luminary Tower merupakan mahakarya super-struktur perkantoran komersial vertikal bertingkat.",
-                solution: "Menggunakan metode Top-Down dengan kombinasi fondasi bor bore pile guna menjaga deformasi batuan."
-            },
-            "2": {
-                title: "Cleft Cliff Mansion",
-                category: "Residensial Mewah",
-                location: "Uluwatu Cliff Area, Badung, Bali",
-                images: [
-                    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
-                    "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1600&q=80"
-                ],
-                year: "2024",
-                area: "1,200 m²",
-                system: "Post-Tensioned Concrete Cantilever Slab",
-                desc: "Hunian eksklusif tepi pantai dengan pelat kantilever tanpa kolom penopang.",
-                solution: "Menggunakan semen khusus anti-sulfat berkepadatan tinggi guna menahan korosi air laut."
-            },
-            "3": {
-                title: "Paviliun Seni & Kreatif Dago",
-                category: "Fasilitas Publik / Galeri",
-                location: "Jl. Pakar Kulon, Dago, Bandung",
-                images: [
-                    "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=80",
-                    "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80"
-                ],
-                year: "2025",
-                area: "3,500 m²",
-                system: "Exposed Architectural Concrete",
-                desc: "Ruang interaksi publik dengan pengaplikasian penuangan beton ekspos halus.",
-                solution: "Metode split-level engineering diimplementasikan untuk adaptasi kontur perbukitan curam."
-            }
-        };
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const projectId = urlParams.get('project') || "1";
-        const data = projectData[projectId];
-
-        let currentSlideIndex = 0;
-        let totalSlides = 0;
-
-        if (data) {
-            totalSlides = data.images.length;
-            document.getElementById("project-title").innerText = data.title;
-            document.getElementById("project-category").innerText = data.category;
-            document.getElementById("project-location").innerText = data.location;
-            document.getElementById("spec-year").innerText = data.year;
-            document.getElementById("spec-area").innerText = data.area;
-            document.getElementById("project-desc").innerText = data.desc;
-            document.getElementById("project-solution").innerText = data.solution;
-            document.getElementById("spec-system").innerText = data.system;
-
-            const track = document.getElementById("carousel-track");
-            const dotsContainer = document.getElementById("carousel-dots");
-            const secondaryGrid = document.getElementById("secondary-grid");
-
-            data.images.forEach((imgUrl, idx) => {
-                const slide = document.createElement("div");
-                slide.className = "min-w-full w-full h-full flex-shrink-0";
-                slide.innerHTML = `<img src="${imgUrl}" class="w-full h-full object-cover">`;
-                track.appendChild(slide);
-
-                const dot = document.createElement("button");
-                dot.className = `w-1.5 h-1.5 rounded-full transition-all duration-300 ${idx === 0 ? 'bg-bgPure w-5' : 'bg-bgPure/30'}`;
-                dot.id = `carousel-dot-${idx}`;
-                dot.onclick = () => goToSlide(idx);
-                dotsContainer.appendChild(dot);
-
-                const gridItem = document.createElement("div");
-                gridItem.className = "w-full aspect-video rounded-2xl overflow-hidden bg-bgPure border border-primary/[0.04]";
-                gridItem.innerHTML = `<img src="${imgUrl}" class="w-full h-full object-cover">`;
-                secondaryGrid.appendChild(gridItem);
-            });
-        }
-
-        function updateCarouselPosition() {
-            document.getElementById("carousel-track").style.transform = `translateX(-${currentSlideIndex * 100}%)`;
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.getElementById(`carousel-dot-${i}`);
-                if (dot) {
-                    if (i === currentSlideIndex) { dot.classList.add("bg-bgPure", "w-5"); }
-                    else { dot.classList.remove("bg-bgPure", "w-5"); }
-                }
-            }
-        }
-        function nextSlide() { currentSlideIndex = (currentSlideIndex + 1) % totalSlides; updateCarouselPosition(); }
-        function prevSlide() { currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides; updateCarouselPosition(); }
-        function goToSlide(idx) { currentSlideIndex = idx; updateCarouselPosition(); }
-    </script>
 </body>
 </html>
